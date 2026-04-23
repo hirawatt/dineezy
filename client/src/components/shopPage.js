@@ -81,9 +81,9 @@ class ShopPage extends Component{
         if (value.length > 0) {
             /*const regex = new RegExp(`^${value}`, 'i');
 
-            suggestions = this.state.itemNameList.sort().filter(v => regex.test(v));*/
+            suggestions = this.state.itemNameList.filter(v => regex.test(v)).sort();*/
 
-            suggestions = this.state.itemNameList.sort().filter(v => v.toLowerCase().includes(value.toLowerCase()));
+            suggestions = this.state.itemNameList.filter(v => v.toLowerCase().includes(value.toLowerCase())).sort();
         }
         this.setState(() => ({ suggestions, item: value }));
     }
